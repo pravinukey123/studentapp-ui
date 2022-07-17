@@ -20,7 +20,7 @@ pipeline {
 
         stage('copy_student_war') {
             steps {
-                sh 'sudo cp /home/ubuntu/workspace/item-1'
+                sh 'sudo cp -r /home/ubuntu/workspace/item-1'
             }
                
         }
