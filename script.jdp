@@ -4,7 +4,7 @@ pipeline {
 
         stage('git clone') {
             steps {
-               git branch: 'main', url: 'https://github.com/pravinukey123/studentapp-ui.git'
+              git credentialsId: 'b16fe0a1-ccea-4cf6-a15e-b427b1f6cf24', url: 'https://github.com/pravinukey123/studentapp-ui.git' 
             }
         }
 
