@@ -29,7 +29,8 @@ pipeline {
 
         stage('copy_student_war') {
             steps {
-                sh 'sudo cp -r /home/ubuntu/workspace/item-1'
+                sh 'sudo cp -r /home/ubuntu/workspace/item-1/target/studentapp-2.2-SNAPSHOT.war /mnt/apache-tomcat-8.5.81/webapps
+'
             }
                
         }
