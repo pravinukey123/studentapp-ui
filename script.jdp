@@ -16,7 +16,16 @@ pipeline {
                 sh 'sudo tar -xvzf /home/ubuntu/workspace/item-1/apache-tomcat-8.5.81.tar.gz -C /mnt'
                 sh 'sudo /mnt/apache-tomcat-8.5.81/bin/catalina.sh start'
             }
-        }    
+        }  
+
+        stage('install maven') {
+            steps {
+                sh 'sudo apt install maven -y'
+                sh 'sudo mvn clean package'
+                sh 'sudo apt update'
+            }
+               
+        }  
 
         stage('copy_student_war') {
             steps {
